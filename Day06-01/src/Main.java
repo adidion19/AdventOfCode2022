@@ -4,32 +4,6 @@ import java.util.Stack;
 
 public class Main
 {
-   public static ArrayList<Stack<Character>> init(String [] pStrings)
-   {
-      ArrayList<Stack<Character>> pStacks = new ArrayList<>(9);
-      String [] str = new String[40];
-      for (int i = 0; i < 9; i++)
-      {
-         pStacks.add(new Stack<Character>());
-      }
-      for (int i = 7; i >= 0; i--)
-      {
-         str = pStrings[i].split(" ");
-         for (int j = 0, k = 0; j < 9; j++)
-         {
-            if (str[k].isEmpty())
-            {
-               k+=4;
-               continue;
-            }
-            pStacks.get(j).push(str[k].charAt(1));
-            k++;
-         }
-      }
-
-      return pStacks;
-   }
-
    public static void main(String[] args)
    {
       try
